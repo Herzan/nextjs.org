@@ -1,10 +1,16 @@
+// app/layout.tsx
 import type { Metadata } from 'next';
-import '@/app/ui/global.css';
-import { inter } from '@/app/ui/fonts';
+import { Inter } from 'next/font/google';
+import './ui/global.css';
+
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
-  title: 'Your App Name',
-  description: 'Created with Next.js',
+  title: 'Acme Dashboard',
+  description: 'Next.js Tutorial Dashboard',
 };
 
 export default function RootLayout({
@@ -14,7 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+      <body 
+        className={`${inter.className} antialiased`}
+        suppressHydrationWarning={true}
+      >
         {children}
       </body>
     </html>
