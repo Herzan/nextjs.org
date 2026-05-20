@@ -36,7 +36,3 @@ export default function RootLayout({
     </html>
   );
 }
-// Fix Vercel build root directory issue
-// Removed duplicate pnpm-lock.yaml from parent folder
-// Set correct Root Directory to nextjs-dashboard
-// Updated build configuration for Next.js deployment
