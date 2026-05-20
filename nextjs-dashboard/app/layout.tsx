@@ -1,16 +1,21 @@
-// app/layout.tsx
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+
+import { inter } from '@/app/ui/fonts';
+
 import './ui/global.css';
 
-const inter = Inter({ 
-  subsets: ['latin'],
-  display: 'swap',
-});
-
 export const metadata: Metadata = {
-  title: 'Acme Dashboard',
-  description: 'Next.js Tutorial Dashboard',
+  title: {
+    template: '%s | Acme Dashboard',
+    default: 'Acme Dashboard',
+  },
+
+  description:
+    'The official Next.js Course Dashboard, built with App Router.',
+
+  metadataBase: new URL(
+    'https://next-learn-dashboard.vercel.sh'
+  ),
 };
 
 export default function RootLayout({
@@ -19,10 +24,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body 
+    <html
+      lang="en"
+      suppressHydrationWarning={true}
+    >
+      <body
         className={`${inter.className} antialiased`}
-        suppressHydrationWarning={true}
       >
         {children}
       </body>
