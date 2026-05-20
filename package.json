@@ -1,6 +1,7 @@
 {
   "name": "nextjs.org",
   "version": "1.0.0",
+  "private": true,
   "description": "",
   "main": "server.js",
 
@@ -24,5 +25,24 @@
     "url": "https://github.com/Herzan/nextjs.org/issues"
   },
 
-  "homepage": "https://github.com/Herzan/nextjs.org#readme"
+  "homepage": "https://github.com/Herzan/nextjs.org#readme",
+
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "next-auth": "^5.0.0-beta.25",
+    "postgres": "^3.4.4",
+    "bcrypt": "^5.1.1",
+    "zod": "^3.25.0"
+  },
+
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "latest",
+    "typescript": "^5.0.0"
+  }
 }
