@@ -8,7 +8,7 @@ import { z } from 'zod';
 
 import type { User } from '@/app/lib/definitions';
 
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 
 import postgres from 'postgres';
 
